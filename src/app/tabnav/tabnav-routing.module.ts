@@ -8,15 +8,6 @@ const routes: Routes = [
     path: 'tabs',
     component: TabnavPage,
     children: [
-      // {
-      //   path: 'home',
-      //   loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-      // },
-      // {
-      //   path: '',
-      //   redirectTo: 'home',
-      //   pathMatch: 'full'
-      // },
       {
         path: 'userdashboard',
         loadChildren: () => import('../userdashboard/userdashboard.module').then( m => m.UserdashboardPageModule)
@@ -36,6 +27,14 @@ const routes: Routes = [
       {
         path: 'reader',
         loadChildren: () => import('../reader/reader.module').then( m => m.ReaderPageModule)
+      },
+      {
+        path: 'attendanceapproval',
+        loadChildren: () => import('../attendanceapproval/attendanceapproval.module').then( m => m.AttendanceapprovalPageModule)
+      },
+      {
+        path: 'courseapproval',
+        loadChildren: () => import('../courseapproval/courseapproval.module').then( m => m.CourseapprovalPageModule)
       },
       {
         path: '',
